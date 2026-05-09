@@ -32,10 +32,11 @@ export default function Navbar() {
           {/* Mobile Menu */}
           <ul className="menu menu-sm dropdown-content mt-3 p-3 shadow bg-slate-900 rounded-box w-52 text-white">
             <li><Link href="#home">HOME</Link></li>
-            <li><Link href="#about">ABOUT</Link></li>
+            <li><Link href="#aboutme">ABOUT</Link></li>
             <li><Link href="#skills">SKILLS</Link></li>
             <li><Link href="#projects">PROJECTS</Link></li>
             <li><Link href="#contact">CONTACT</Link></li>
+            <li><Link href="#education">EDUCATION</Link></li>
           </ul>
 
         </div>
@@ -52,10 +53,11 @@ export default function Navbar() {
         <ul className="menu menu-horizontal gap-6 px-1 text-sm font-medium">
 
           <li><Link href="#home" className="hover:text-blue-300 transition">HOME</Link></li>
-          <li><Link href="#about" className="hover:text-blue-300 transition">ABOUT</Link></li>
+          <li><Link href="#aboutme" className="hover:text-blue-300 transition">ABOUT</Link></li>
           <li><Link href="#skills" className="hover:text-blue-300 transition">SKILLS</Link></li>
           <li><Link href="#projects" className="hover:text-blue-300 transition">PROJECTS</Link></li>
           <li><Link href="#contact" className="hover:text-blue-300 transition">CONTACT</Link></li>
+          <li><Link href="#education" className="hover:text-blue-300 transition">EDUCATION</Link></li>
 
         </ul>
       </div>

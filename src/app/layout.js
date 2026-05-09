@@ -7,6 +7,7 @@ import Home from "./page";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Skills from "@/components/Skills";
+import Education from "@/components/Education";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,10 +32,11 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col">
         <Navbar></Navbar>
-        <AboutMe></AboutMe>
+         <AboutMe></AboutMe>
         
         <Home></Home>
         <Skills></Skills>
+        <Education></Education>
         <Projects></Projects>
         <Contact></Contact>
         
