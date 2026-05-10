@@ -3,11 +3,12 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import AboutMe from "@/components/AboutMe";
 import Footer from "@/components/Footer";
-import Home from "./page";
+
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Skills from "@/components/Skills";
 import Education from "@/components/Education";
+import Homepower from "@/components/Homepower";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,9 +33,8 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col">
         <Navbar></Navbar>
-         <AboutMe></AboutMe>
-        
-        <Home></Home>
+        <Homepower></Homepower>
+        <AboutMe></AboutMe>
         <Skills></Skills>
         <Education></Education>
         <Projects></Projects>

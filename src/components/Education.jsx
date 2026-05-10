@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const Education = () => {
     return (
         <div>
-               <section className="px-6 py-20 min-h-screen text-white bg-gradient-to-r from-blue-950 via-slate-900 to-indigo-950">
+               <section id="education" className="px-6 py-20 min-h-screen text-white bg-gradient-to-r from-blue-950 via-slate-900 to-indigo-950">
 
       {/* Title Animation */}
       <motion.h2

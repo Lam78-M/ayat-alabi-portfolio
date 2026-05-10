@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const AboutMe = () => {
     return (
         <div>
-       <section className="px-6 py-24 text-white bg-gradient-to-r from-blue-950 via-slate-900 to-indigo-950">
+       <section id="aboutme" className="px-6 py-24 text-white bg-gradient-to-r from-blue-950 via-slate-900 to-indigo-950">
 
       <div className="max-w-5xl mx-auto">
 
