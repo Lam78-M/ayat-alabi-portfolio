@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col bg-gradient-to-br from-black via-slate-900 to-black text-white">
         <Navbar></Navbar>
         <Homepower></Homepower>
         <AboutMe></AboutMe>
@@ -39,7 +39,6 @@ export default function RootLayout({ children }) {
         <Education></Education>
         <Projects></Projects>
         <Contact></Contact>
-        
         {children}
         <Footer></Footer>
         </body>

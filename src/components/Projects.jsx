@@ -15,14 +15,13 @@ import { FaGithub } from "react-icons/fa";
 
 const projects = [
   {
-    title: "TravelSphere",
+    title: "Summer shop",
     description:
       "A modern travel booking platform with secure authentication, destination management, and smooth animations.",
-    image:
-      "",
-    tech: ["Next.js", "MongoDB", "Tailwind", "Framer Motion"],
-    github: "#",
-    live: "#",
+    image: "/Screenshot 2026-05-12 151440.png",
+    tech: ["Next.js", "MongoDB", "Tailwind", "Animate CSS","Better Auth"],
+    github: "https://github.com/Lam78-M/category-A8-Jackfruit-SunCart",
+    live: "https://category-a8-jackfruit-sun-cart-szdc.vercel.app",
     icon: <Globe className="w-5 h-5" />,
   },
   {
@@ -51,21 +50,19 @@ const projects = [
     title: "DataFlow",
     description:
       "A full-stack analytics dashboard with beautiful charts, real-time insights, and admin controls.",
-    image:
-      "",
+    image: "/Screenshot 2026-05-12 154224.png",
     tech: ["Next.js", "Chart.js", "Prisma", "PostgreSQL"],
-    github: "#",
-    live: "#",
+    github: " https://github.com/Lam78-M/project-keep-keeper",
+    live: "https://my-keep-keeper.vercel.app/",
     icon: <Database className="w-5 h-5" />,
   },
 ];
 
 const Projects = () => {
   return (
-    <section id="projects" className="relative py-24 overflow-hidden bg-gradient-to-r from-blue-950 via-slate-900 to-indigo-950">
+    <section id="projects" className="relative  overflow-hidden  ">
       {/* Background Blur */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-cyan-500/20 blur-3xl rounded-full"></div>
-      <div className="absolute bottom-0 right-0 w-72 h-72 bg-indigo-500/20 blur-3xl rounded-full"></div>
+     
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Heading */}
@@ -80,7 +77,7 @@ const Projects = () => {
             Portfolio
           </p>
 
-          <h2 className="text-4xl md:text-6xl font-extrabold text-white">
+          <h2 className="text-4xl md:text-6xl font-semiboldbold text-white">
             Featured Projects
           </h2>
 
@@ -116,7 +113,7 @@ const Projects = () => {
                   alt={project.title}
                   width={800}
                   height={500}
-                  className="w-full h-[250px] object-cover transition duration-700 group-hover:scale-110"
+                  className="w-full h-[300px] object-cover transition duration-700 group-hover:scale-110"
                 />
 
                 <div className="absolute inset-0 bg-black/30"></div>
@@ -155,28 +152,30 @@ const Projects = () => {
                 </div>
 
                 {/* Buttons */}
-                <div className="flex gap-4">
+                <div className="flex gap-4 relative z-20">
                   <a
-                    href={project.github}
-                    target="_blank"
-                    className="flex items-center gap-2 px-5 py-3 rounded-2xl
-                    bg-white/10 hover:bg-white/20 border border-white/10
-                    text-white transition duration-300"
-                  >
-                    <FaGithub size={18} />
-                    GitHub
-                  </a>
+  href={project.github}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="relative z-20 flex items-center gap-2 px-5 py-3 rounded-2xl
+  bg-white/10 hover:bg-white/20 border border-white/10
+  text-white transition duration-300"
+>
+  <FaGithub size={18} />
+  GitHub
+</a>
 
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    className="flex items-center gap-2 px-5 py-3 rounded-2xl
-                    bg-cyan-500 hover:bg-cyan-400 text-black font-semibold
-                    transition duration-300 shadow-lg shadow-cyan-500/30"
-                  >
-                    <ExternalLink size={18} />
-                    Live Demo
-                  </a>
+<a
+  href={project.live}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="relative z-20 flex items-center gap-2 px-5 py-3 rounded-2xl
+  bg-cyan-500 hover:bg-cyan-400 text-black font-semibold
+  transition duration-300 shadow-lg shadow-cyan-500/30"
+>
+  <ExternalLink size={18} />
+  Live Demo
+</a>
                 </div>
               </div>
 
@@ -184,7 +183,7 @@ const Projects = () => {
               <div
                 className="absolute inset-0 rounded-[30px]
                 border border-cyan-400/10
-                group-hover:border-cyan-400/30 transition duration-500"
+                group-hover:border-cyan-400/30 transition duration-500  pointer-events-none"
               ></div>
             </motion.div>
           ))}

@@ -1,3 +1,5 @@
+import ProjectSkill from "@/app/projectskill/page";
+import { IoLogoNodejs } from "react-icons/io";
 import {
   SiNextdotjs,
   SiReact,
@@ -6,23 +8,28 @@ import {
   SiJavascript,
   SiCss,
   SiHtml5,
+  SiExpress,
+  SiGithub,
 } from "react-icons/si";
 
 export default function Skills() {
   return (
   <section
       id="skills"
-      className="py-24 bg-gradient-to-r from-blue-950 via-slate-900 to-indigo-950"
+      className="py-24 "
     >
       <div className="max-w-6xl mx-auto px-6 text-center">
 
         {/* TITLE */}
-        <h2 className="text-4xl sm:text-5xl font-bold mb-14 text-white">
-          My Skills
-        </h2>
+        <h2 className="text-4xl font-semibold text-center relative inline-block">
+  Technologies
+
+  <span className="absolute left-0 -bottom-2 w-full h-[1px] bg-cyan-600 animate-neon"></span>
+</h2>
+        <p className="mb-20 text-xl mt-5">My tech stack</p>
 
         {/* GRID */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8">
 
  <SkillCard icon={<SiNextdotjs className="text-white" />} name="Next.js" glow="hover:shadow-white/40" />
 
@@ -37,9 +44,16 @@ export default function Skills() {
 <SkillCard icon={<SiCss className="text-blue-500" />} name="CSS" glow="hover:shadow-blue-500/40" />
 
 <SkillCard icon={<SiHtml5 className="text-orange-500" />} name="HTML" glow="hover:shadow-orange-500/40" />
+
+<SkillCard icon={<IoLogoNodejs className="text-green-500" />}  name="Node.js"  glow="hover:shadow-green-500/40" />
+
+<SkillCard  icon={<SiExpress className="text-gray-300" />}  name="Express.js"  glow="hover:shadow-gray-400/30" />
+
+<SkillCard icon={<SiGithub className="text-gray-300" />} name="GitHub" glow="hover:shadow-gray-400/30"/>
         </div>
 
       </div>
+      <ProjectSkill></ProjectSkill>
     </section>
   );
 }

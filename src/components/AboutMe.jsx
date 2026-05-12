@@ -1,70 +1,109 @@
 
 "use client";
 
-import { motion } from "framer-motion";
-const AboutMe = () => {
-    return (
-        <div>
-       <section id="aboutme" className="px-6 py-24 text-white bg-gradient-to-r from-blue-950 via-slate-900 to-indigo-950">
+import {
+  FaGithub,
+  FaLinkedin,
+  FaFacebook,
+  FaTwitter,
+} from "react-icons/fa";
+import { HiCodeBracket } from "react-icons/hi2";
+import Image from "next/image";
 
-      <div className="max-w-5xl mx-auto">
+export default function AboutMe() {
+  return (
+    <section id="aboutme" className="w-full px-6 py-40  text-white ">
+      
+      {/* Title */}
+      <div className="text-center mb-12">
+              <h2 className="text-4xl font-semibold text-center relative inline-block mb-3">
+      About Me
 
-        {/* Title */}
-        <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-3xl font-bold text-cyan-400 mb-10 text-center"
-        >
-          About Me
-        </motion.h2>
+  <span className="absolute left-0 -bottom-2 w-full h-[1px] bg-cyan-600 animate-neon"></span>
+</h2>
+        <p className="text-gray-400 mt-2">My Introduction</p>
+      </div>
 
-        {/* Card */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          className="p-8 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-lg shadow-black/40"
-        >
+      {/* Main Container */}
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+        
+        {/* Left Image / Avatar */}
 
-          <p className="text-gray-200 leading-relaxed text-lg">
-            I am a passionate <span className="text-cyan-400 font-semibold">Frontend Developer</span> from Bangladesh with a strong interest in building modern, responsive, and user-friendly web applications.
+        <div className="flex-1 flex justify-center items-center">
+  
+  <div className="w-72 h-72 md:w-80 md:h-80 rounded-full bg-gradient-to-tr from-indigo-500 via-purple-500 to-cyan-500 p-1 flex items-center justify-center">
+    
+    <div className="w-full h-full rounded-full bg-black overflow-hidden flex items-center justify-center">
+      
+      <Image
+        src="/WhatsApp Image 2026-05-12 at 7.01.51 PM.jpeg"
+        alt="profile"
+        width={500}
+        height={500}
+        className="w-full h-full object-cover object-[center_100%]"
+      />
+
+    </div>
+  </div>
+</div>
+
+        {/* Right Content */}
+        <div className="flex-1 space-y-6">
+          
+          <p className="text-gray-300 leading-relaxed">
+            I am a passionate Full Stack Developer who loves building
+            responsive, scalable, and visually stunning web applications.
+            I enjoy working with modern technologies like Next.js, React,
+            Node.js, and MongoDB.
           </p>
 
-          <p className="text-gray-300 mt-4 leading-relaxed">
-            I have completed my <span className="text-white font-semibold">SSC (2022)</span> from Chowbari Islamic Uccho Biddaloi with GPA 5.00 (A+) and my <span className="text-white font-semibold">HSC (2025)</span> from Haji Korop Ali Memorial Degree College, Science background.
-          </p>
+          {/* Stats */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="bg-white/10 p-4 rounded-xl text-center">
+    <p className="text-xl font-bold">Learning Phase</p>
+    <p className="text-gray-400 text-sm">Web Development</p>
+  </div>
 
-          <p className="text-gray-300 mt-4 leading-relaxed">
-            Currently, I am focusing on modern web technologies like <span className="text-cyan-300">React.js, Next.js, JavaScript, and Tailwind CSS</span>. I also practice problem solving and continuously improve my development skills by building real-world projects.
-          </p>
+  <div className="bg-white/10 p-4 rounded-xl text-center">
+    <p className="text-xl font-bold">Assignment Projects</p>
+    <p className="text-gray-400 text-sm">Practice Based</p>
+  </div>
 
-          <p className="text-gray-300 mt-4 leading-relaxed">
-            My goal is to become a professional full-stack developer and contribute to impactful software solutions that solve real problems.
-          </p>
-
-          {/* Highlights */}
-          <div className="mt-6 flex flex-wrap gap-3">
-            <span className="px-3 py-1 bg-cyan-500/20 border border-cyan-400/30 rounded-full text-sm">
-              React.js
-            </span>
-            <span className="px-3 py-1 bg-cyan-500/20 border border-cyan-400/30 rounded-full text-sm">
-              Next.js
-            </span>
-            <span className="px-3 py-1 bg-cyan-500/20 border border-cyan-400/30 rounded-full text-sm">
-              JavaScript
-            </span>
-            <span className="px-3 py-1 bg-cyan-500/20 border border-cyan-400/30 rounded-full text-sm">
-              Tailwind CSS
-            </span>
+            <div className="bg-white/10 p-4 rounded-xl text-center">
+    <p className="text-xl font-bold">9+ Skills</p>
+    <p className="text-gray-400 text-sm">HTML, CSS, JS, React,NextJs and more...</p>
+  </div>
           </div>
 
-        </motion.div>
+          {/* Social Links */}
+         
+  <div>
+            <h3 className="text-lg font-semibold mb-4">Connect</h3>
 
+            <div className="flex gap-4">
+              <a href="https://github.com/" className="p-3 rounded-xl bg-white/10 hover:bg-white/20 transition">
+                <FaGithub size={18} />
+              </a>
+
+              <a href="https://www.linkedin.com/in/ayat-alabi-lam/" className="p-3 rounded-xl bg-white/10 hover:bg-white/20 transition">
+                <FaLinkedin size={18} />
+              </a>
+
+              <a href="https://x.com/home" className="p-3 rounded-xl bg-white/10 hover:bg-white/20 transition">
+                <FaTwitter size={18} />
+              </a>
+                <a href="https://www.facebook.com/ayat.alabilam" className="p-3 rounded-xl bg-white/10 hover:bg-white/20 transition">
+                <FaFacebook size={18} />
+              </a>
+            </div>
+          </div>
+          {/* Button */}
+          <button className="mt-4 px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-full text-black font-semibold transition flex items-center gap-2">
+            <HiCodeBracket size={18} />
+            Download Resume
+          </button>
+        </div>
       </div>
     </section>
-        </div>
-    );
-};
-
-export default AboutMe;
+  );
+}

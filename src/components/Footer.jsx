@@ -2,16 +2,19 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaFacebook, FaTwitter } from "react-icons/fa";
 import { ArrowUp } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="relative bg-gradient-to-r from-blue-950 via-slate-900 to-indigo-950 text-white pt-20 pb-10 overflow-hidden">
+    <footer className="relative  text-white pt-20 pb-10 overflow-hidden">
+   
+<div className="border-t border-gray-700 pt-15">
+      </div>
+
 
       {/* Glow */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-cyan-500/20 blur-3xl rounded-full"></div>
-      <div className="absolute bottom-0 right-0 w-72 h-72 bg-indigo-500/20 blur-3xl rounded-full"></div>
+    
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
 
@@ -37,10 +40,11 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-3 text-slate-300">
-              <li className="hover:text-cyan-400 cursor-pointer">Home</li>
-              <li className="hover:text-cyan-400 cursor-pointer">Projects</li>
-              <li className="hover:text-cyan-400 cursor-pointer">Skills</li>
-              <li className="hover:text-cyan-400 cursor-pointer">Contact</li>
+           <a href="#homepower">   <li className="hover:text-cyan-400 cursor-pointer">Home</li></a>
+             <a href="#projects"> <li className="hover:text-cyan-400 cursor-pointer">Projects</li></a>
+             <a href="#skills"> <li className="hover:text-cyan-400 cursor-pointer">Skill</li></a>
+             <a href="#contact"> <li className="hover:text-cyan-400 cursor-pointer">Contact</li></a>
+         
             </ul>
           </div>
 
@@ -49,16 +53,19 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Connect</h3>
 
             <div className="flex gap-4">
-              <a href="#" className="p-3 rounded-xl bg-white/10 hover:bg-white/20 transition">
+              <a href="https://github.com/" className="p-3 rounded-xl bg-white/10 hover:bg-white/20 transition">
                 <FaGithub size={18} />
               </a>
 
-              <a href="#" className="p-3 rounded-xl bg-white/10 hover:bg-white/20 transition">
+              <a href="https://www.linkedin.com/in/ayat-alabi-lam/" className="p-3 rounded-xl bg-white/10 hover:bg-white/20 transition">
                 <FaLinkedin size={18} />
               </a>
 
-              <a href="#" className="p-3 rounded-xl bg-white/10 hover:bg-white/20 transition">
-                <FaEnvelope size={18} />
+              <a href="https://x.com/home" className="p-3 rounded-xl bg-white/10 hover:bg-white/20 transition">
+                <FaTwitter size={18} />
+              </a>
+                <a href="https://www.facebook.com/ayat.alabilam" className="p-3 rounded-xl bg-white/10 hover:bg-white/20 transition">
+                <FaFacebook size={18} />
               </a>
             </div>
           </div>
